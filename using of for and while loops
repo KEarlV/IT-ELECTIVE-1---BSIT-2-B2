@@ -1,0 +1,134 @@
+# Use for, while, and do-while loops to solve the following problems:
+
+
+// 1. Count down from 10 to 1: Write a program that counds down from 10 to 1 using a loop.
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        for (int i = 10; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+    } 
+}
+
+// 2. Print Odd Numbers: Write a program to print all odd numbers between 1 and 50
+// There are 2 ways i've coded it:
+
+for (int i = 1; i <= 50; i++)
+        {
+            if (i % 2 != 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+for (int i = 1; i <= 50; i = i + 2)
+{
+  Console.WriteLine(i);
+}
+
+// 3. Power of a number: Write a program that calculate the power of a given base number raised to a given exponent without using built-in functions
+
+using System;
+
+public class PowerCalculator
+{
+    public static void Main(string[] args)
+    {
+        // Define the base and exponent
+        int baseNumber = 2;
+        int exponent = 5;
+        long result = 1; // Use long to avoid overflow for larger results
+
+        // Handle the case where the exponent is 0
+        if (exponent == 0)
+        {
+            result = 1;
+        }
+        else
+        {
+            // Loop to multiply the base by itself 'exponent' number of times
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseNumber;
+            }
+        }
+        
+        // Print the result
+        Console.WriteLine($"{baseNumber} raised to the power of {exponent} is: {result}");
+    }
+}
+
+// 4. Sum of Squares: Write a program to calculate the sum of the squares of the first 10 natural numbers.
+
+using System;
+
+public class SumOfSquares
+{
+    public static void Main(string[] args)
+    {
+        // Variable to store the running total of the squares
+        int sumOfSquares = 0;
+
+        // Loop through the first 10 natural numbers (1 to 10)
+        for (int i = 1; i <= 10; i++)
+        {
+            // Calculate the square of the current number
+            int square = i * i;
+            
+            // Add the square to the running total
+            sumOfSquares += square;
+        }
+
+        // Print the final result 
+        Console.WriteLine($"The sum of the squares of the first 10 natural numbers is: {sumOfSquares}");
+    }
+}
+
+
+// 5. Sum of Odd Digits: Write a program to calculate the sum of odd digits in a given number.
+
+using System;
+
+public class OddDigitSum
+{
+    public static void Main(string[] args)
+    {
+        // Define the number you want to analyze
+        int number = 12345;
+        
+        // Variable to hold the sum of the odd digits
+        int sumOfOddDigits = 0;
+
+        // Create a temporary variable to manipulate without changing the original number
+        int tempNumber = number;
+
+        // Loop as long as the number is greater than 0
+        while (tempNumber > 0)
+        {
+            // Extract the last digit using the modulo operator (%)
+            int digit = tempNumber % 10;
+            
+            // Check if the extracted digit is odd
+            if (digit % 2 != 0)
+            {
+                // If it's an odd digit, add it to the sum
+                sumOfOddDigits += digit;
+            }
+            
+            // Remove the last digit by performing integer division
+            tempNumber /= 10;
+        }
+
+        // Print the final result 
+        Console.WriteLine($"The sum of the odd digits in {number} is: {sumOfOddDigits}");
+    }
+}
+
+
+
