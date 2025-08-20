@@ -1,0 +1,36 @@
+// 1. Explain why this loop will never end.
+int i = 1;
+while (i <=5)
+{
+  Console.WriteLine(i);
+}
+
+// The loop will never end because the iterator is missing inside the loop.
+// right code should be:
+
+int i = 1;
+while (i <= 5)
+{
+  Console.WriteLine(i);
+  i++;
+}
+
+
+
+//2. Modify the condition to include the value 5 in the output.
+
+int i =1;
+while (i <5)
+{
+  Console.WriteLine(i);
+  i++;
+}
+
+// just add "=" in the loop.
+
+int i =1;
+    while (i <= 5)
+    {
+        Console.WriteLine(i);
+        i++;
+    }
